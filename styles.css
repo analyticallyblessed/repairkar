@@ -1,226 +1,377 @@
 * {
-        margin: 0;
-            padding: 0;
-                box-sizing: border-box;
-                    font-family: 'Poppins', sans-serif;
-                    }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-                    body {
-                        line-height: 1.6;
-                            color: #333;
-                                background-color: #f4f7fa;
-                                }
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9fbfc;
+}
 
-                                .container {
-                                    max-width: 1200px;
-                                        margin: 0 auto;
-                                            padding: 0 20px;
-                                            }
+/* App Bar */
+.app-bar {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(90deg, #007bff, #00c4b4);
+    color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
 
-                                            header {
-                                                background: linear-gradient(90deg, #007bff, #00c4b4);
-                                                    color: #fff;
-                                                        text-align: center;
-                                                            padding: 2rem 0;
-                                                            }
+.app-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-                                                            header h1 {
-                                                                font-size: 2.5rem;
-                                                                    font-weight: 600;
-                                                                    }
+.app-bar-logo {
+    width: 80px;
+    height: auto;
+}
 
-                                                                    header p {
-                                                                        font-size: 1.2rem;
-                                                                            margin: 0.5rem 0;
-                                                                            }
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
 
-                                                                            .header-logo {
-                                                                                    width: 100px; /* Fixed width for consistency */
-                                                                                        height: auto; /* Maintain aspect ratio */
-                                                                                            margin: 0 auto 1rem; /* Center horizontally, add bottom margin */
-                                                                                                display: block; /* Ensure it’s a block element for centering */
-                                                                                                }
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
 
-                                                                                                @media (max-width: 768px) {
-                                                                                                    .header-logo {
-                                                                                                            width: 100px; /* Smaller on mobile */
-                                                                                                                }
-                                                                                                                }
+.nav-links li a:hover {
+    color: #25D366;
+}
 
-                                                                                                                /* Ensure no global img styles interfere */
-                                                                                                                img.header-logo {
-                                                                                                                    max-width: 100px; /* Fallback to prevent oversizing */
-                                                                                                                    }
-                                                                            
-                                                                            .whatsapp-btn {
-                                                                                display: inline-block;
-                                                                                    background-color: #25D366;
-                                                                                        color: #fff;
-                                                                                            padding: 0.8rem 1.5rem;
-                                                                                                border-radius: 5px;
-                                                                                                    text-decoration: none;
-                                                                                                        margin-top: 1rem;
-                                                                                                            font-weight: 400;
-                                                                                                                transition: background-color 0.3s;
-                                                                                                                }
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-                                                                                                                .whatsapp-btn:hover {
-                                                                                                                    background-color: #20b958;
-                                                                                                                    }
+/* Hero */
+.hero {
+    padding: 4rem 0;
+    text-align: center;
+    background: linear-gradient(180deg, #e6f0fa, #fff);
+    animation: fadeIn 1s ease-in;
+}
 
-                                                                                                                    .hero {
-                                                                                                                        padding: 3rem 0;
-                                                                                                                            text-align: center;
-                                                                                                                                background-color: #fff;
-                                                                                                                                }
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
 
-                                                                                                                                .hero h2 {
-                                                                                                                                    font-size: 2rem;
-                                                                                                                                        color: #007bff;
-                                                                                                                                        }
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
 
-                                                                                                                                        .hero p {
-                                                                                                                                            font-size: 1.1rem;
-                                                                                                                                                margin: 1rem 0;
-                                                                                                                                                }
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-                                                                                                                                                .hero-image {
-                                                                                                                                                    max-width: 100%;
-                                                                                                                                                        height: auto;
-                                                                                                                                                            margin-top: 1rem;
-                                                                                                                                                                border-radius: 10px;
-                                                                                                                                                                }
+.cta-button {
+    display: inline-block;
+    background-color: #25D366;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+}
 
-                                                                                                                                                                .why-choose, .services, .form-section, .testimonials {
-                                                                                                                                                                    padding: 3rem 0;
-                                                                                                                                                                    }
+.cta-button:hover {
+    background-color: #20b958;
+    transform: scale(1.05);
+}
 
-                                                                                                                                                                    .why-choose h2, .services h2, .form-section h2, .testimonials h2 {
-                                                                                                                                                                        font-size: 2rem;
-                                                                                                                                                                            color: #007bff;
-                                                                                                                                                                                text-align: center;
-                                                                                                                                                                                    margin-bottom: 2rem;
-                                                                                                                                                                                    }
+/* Floating CTA */
+.floating-cta {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: background-color 0.3s, transform 0.2s;
+}
 
-                                                                                                                                                                                    .why-choose ul {
-                                                                                                                                                                                        list-style: none;
-                                                                                                                                                                                            max-width: 600px;
-                                                                                                                                                                                                margin: 0 auto;
-                                                                                                                                                                                                }
+.floating-cta:hover {
+    background-color: #20b958;
+    transform: scale(1.1);
+}
 
-                                                                                                                                                                                                .why-choose li {
-                                                                                                                                                                                                    font-size: 1.1rem;
-                                                                                                                                                                                                        margin: 1rem 0;
-                                                                                                                                                                                                            padding-left: 1.5rem;
-                                                                                                                                                                                                                position: relative;
-                                                                                                                                                                                                                }
+/* Form Section */
+.form-section {
+    padding: 3rem 0;
+    background-color: #fff;
+}
 
-                                                                                                                                                                                                                .why-choose li::before {
-                                                                                                                                                                                                                    content: "✔";
-                                                                                                                                                                                                                        color: #00c4b4;
-                                                                                                                                                                                                                            position: absolute;
-                                                                                                                                                                                                                                left: 0;
-                                                                                                                                                                                                                                }
+.form-section h2 {
+    font-size: 2.2rem;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
 
-                                                                                                                                                                                                                                .service-grid, .testimonial-grid {
-                                                                                                                                                                                                                                    display: grid;
-                                                                                                                                                                                                                                        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-                                                                                                                                                                                                                                            gap: 2rem;
-                                                                                                                                                                                                                                                margin-top: 2rem;
-                                                                                                                                                                                                                                                }
+#repair-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: #f4f7fa;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
 
-                                                                                                                                                                                                                                                .service-item, .testimonial-item {
-                                                                                                                                                                                                                                                    background: #fff;
-                                                                                                                                                                                                                                                        padding: 1.5rem;
-                                                                                                                                                                                                                                                            border-radius: 10px;
-                                                                                                                                                                                                                                                                text-align: center;
-                                                                                                                                                                                                                                                                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-                                                                                                                                                                                                                                                                    }
+.form-group label {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+}
 
-                                                                                                                                                                                                                                                                    .service-item img {
-                                                                                                                                                                                                                                                                        max-width: 100%;
-                                                                                                                                                                                                                                                                            height: auto;
-                                                                                                                                                                                                                                                                                border-radius: 5px;
-                                                                                                                                                                                                                                                                                    margin-bottom: 1rem;
-                                                                                                                                                                                                                                                                                    }
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.8rem;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    width: 100%;
+    transition: border-color 0.3s;
+}
 
-                                                                                                                                                                                                                                                                                    .service-item h3 {
-                                                                                                                                                                                                                                                                                        font-size: 1.3rem;
-                                                                                                                                                                                                                                                                                            color: #007bff;
-                                                                                                                                                                                                                                                                                            }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
 
-                                                                                                                                                                                                                                                                                            .testimonial-item p {
-                                                                                                                                                                                                                                                                                                font-size: 1rem;
-                                                                                                                                                                                                                                                                                                    font-style: italic;
-                                                                                                                                                                                                                                                                                                    }
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
 
-                                                                                                                                                                                                                                                                                                    .testimonial-item p:last-child {
-                                                                                                                                                                                                                                                                                                        font-weight: 600;
-                                                                                                                                                                                                                                                                                                            color: #00c4b4;
-                                                                                                                                                                                                                                                                                                                margin-top: 0.5rem;
-                                                                                                                                                                                                                                                                                                                }
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
 
-                                                                                                                                                                                                                                                                                                                form {
-                                                                                                                                                                                                                                                                                                                    max-width: 600px;
-                                                                                                                                                                                                                                                                                                                        margin: 0 auto;
-                                                                                                                                                                                                                                                                                                                            display: flex;
-                                                                                                                                                                                                                                                                                                                                flex-direction: column;
-                                                                                                                                                                                                                                                                                                                                    gap: 1rem;
-                                                                                                                                                                                                                                                                                                                                    }
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
 
-                                                                                                                                                                                                                                                                                                                                    form label {
-                                                                                                                                                                                                                                                                                                                                        font-size: 1rem;
-                                                                                                                                                                                                                                                                                                                                            color: #333;
-                                                                                                                                                                                                                                                                                                                                            }
+.whatsapp-btn {
+    background-color: #25D366;
+    color: #fff;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
 
-                                                                                                                                                                                                                                                                                                                                            form input, form select, form textarea {
-                                                                                                                                                                                                                                                                                                                                                padding: 0.8rem;
-                                                                                                                                                                                                                                                                                                                                                    border: 1px solid #ccc;
-                                                                                                                                                                                                                                                                                                                                                        border-radius: 5px;
-                                                                                                                                                                                                                                                                                                                                                            font-size: 1rem;
-                                                                                                                                                                                                                                                                                                                                                                width: 100%;
-                                                                                                                                                                                                                                                                                                                                                                }
+.whatsapp-btn:hover {
+    background-color: #20b958;
+    transform: scale(1.05);
+}
 
-                                                                                                                                                                                                                                                                                                                                                                form textarea {
-                                                                                                                                                                                                                                                                                                                                                                    resize: vertical;
-                                                                                                                                                                                                                                                                                                                                                                        min-height: 100px;
-                                                                                                                                                                                                                                                                                                                                                                        }
+.form-message {
+    text-align: center;
+    font-size: 1rem;
+    color: #007bff;
+    margin-top: 1rem;
+}
 
-                                                                                                                                                                                                                                                                                                                                                                        .checkbox-group {
-                                                                                                                                                                                                                                                                                                                                                                            display: flex;
-                                                                                                                                                                                                                                                                                                                                                                                flex-wrap: wrap;
-                                                                                                                                                                                                                                                                                                                                                                                    gap: 1rem;
-                                                                                                                                                                                                                                                                                                                                                                                    }
+/* Why Choose */
+.why-choose {
+    padding: 3rem 0;
+    background-color: #f9fbfc;
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                    .checkbox-group label {
-                                                                                                                                                                                                                                                                                                                                                                                        display: flex;
-                                                                                                                                                                                                                                                                                                                                                                                            align-items: center;
-                                                                                                                                                                                                                                                                                                                                                                                                gap: 0.5rem;
-                                                                                                                                                                                                                                                                                                                                                                                                }
+.why-choose h2 {
+    font-size: 2.2rem;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                                footer {
-                                                                                                                                                                                                                                                                                                                                                                                                    background: #007bff;
-                                                                                                                                                                                                                                                                                                                                                                                                        color: #fff;
-                                                                                                                                                                                                                                                                                                                                                                                                            text-align: center;
-                                                                                                                                                                                                                                                                                                                                                                                                                padding: 1rem 0;
-                                                                                                                                                                                                                                                                                                                                                                                                                }
+.why-choose ul {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                                                footer a {
-                                                                                                                                                                                                                                                                                                                                                                                                                    color: #fff;
-                                                                                                                                                                                                                                                                                                                                                                                                                        text-decoration: underline;
-                                                                                                                                                                                                                                                                                                                                                                                                                        }
+.why-choose li {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                                                        /* Responsive Design */
-                                                                                                                                                                                                                                                                                                                                                                                                                        @media (max-width: 768px) {
-                                                                                                                                                                                                                                                                                                                                                                                                                            header h1 {
-                                                                                                                                                                                                                                                                                                                                                                                                                                    font-size: 2rem;
-                                                                                                                                                                                                                                                                                                                                                                                                                                        }
+.why-choose li::before {
+    content: "✔";
+    color: #00c4b4;
+    position: absolute;
+    left: 0;
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                            .hero h2 {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                    font-size: 1.5rem;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
+/* Services */
+.services {
+    padding: 3rem 0;
+}
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                            .service-grid, .testimonial-grid {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                    grid-template-columns: 1fr;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
+.services h2 {
+    font-size: 2.2rem;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-item {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.service-item h3 {
+    font-size: 1.3rem;
+    color: #007bff;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 3rem 0;
+    background-color: #f9fbfc;
+}
+
+.testimonials h2 {
+    font-size: 2.2rem;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-item {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-item p {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.testimonial-item p:last-child {
+    font-weight: 600;
+    color: #00c4b4;
+    margin-top: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .app-bar .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .service-grid, .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #repair-form {
+        padding: 1.5rem;
+    }
+}
