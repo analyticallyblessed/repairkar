@@ -34,6 +34,24 @@
                                                                             margin: 0.5rem 0;
                                                                             }
 
+                                                                            .header-logo {
+                                                                                    width: 100px; /* Fixed width for consistency */
+                                                                                        height: auto; /* Maintain aspect ratio */
+                                                                                            margin: 0 auto 1rem; /* Center horizontally, add bottom margin */
+                                                                                                display: block; /* Ensure it’s a block element for centering */
+                                                                                                }
+
+                                                                                                @media (max-width: 768px) {
+                                                                                                    .header-logo {
+                                                                                                            width: 100px; /* Smaller on mobile */
+                                                                                                                }
+                                                                                                                }
+
+                                                                                                                /* Ensure no global img styles interfere */
+                                                                                                                img.header-logo {
+                                                                                                                    max-width: 100px; /* Fallback to prevent oversizing */
+                                                                                                                    }
+                                                                            
                                                                             .whatsapp-btn {
                                                                                 display: inline-block;
                                                                                     background-color: #25D366;
@@ -206,4 +224,3 @@
                                                                                                                                                                                                                                                                                                                                                                                                                                                                     grid-template-columns: 1fr;
                                                                                                                                                                                                                                                                                                                                                                                                                                                                         }
                                                                                                                                                                                                                                                                                                                                                                                                                                                                         }
-}
