@@ -72,6 +72,13 @@ document.getElementById('repair-form').addEventListener('submit', async function
         }, 1000);
     }
 });
+// Smooth scroll for floating CTA
+document.querySelector('.floating-cta').addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+});
 
 function showFormMessage(message, type) {
     const messageEl = document.getElementById('form-message');
