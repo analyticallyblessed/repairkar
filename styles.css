@@ -443,6 +443,12 @@ footer a {
         font-size: 1rem;
     }
 
+    .floating-cta {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+        bottom: 15px;
+        right: 15px;
+    }
     .service-grid, .testimonial-grid {
         grid-template-columns: 1fr;
     }
